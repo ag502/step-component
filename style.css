@@ -1,0 +1,38 @@
+*, *:before, *:after {
+ box-sizing: border-box;
+}
+
+.c-stepper {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0;
+}
+
+.c-stepper__item {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.c-stepper__item:not(:last-child) {
+    flex: 1;
+}
+
+.c-stepper__item:before {
+    --size: 3rem;
+    content: '';
+    display: block;
+    width: var(--size);
+    height: var(--size);
+    border-radius: 50%;
+    background-color: aqua;
+}
+
+.c-stepper__item:not(:last-child):after {
+    content: '';
+    display: block;
+    flex: 1;
+    height: 2px;
+    margin-inline-end: 0.5rem;
+    background-color: #e0e0e0;
+}
